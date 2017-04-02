@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+  <div class="ui huge header">New Blog</div>
+  <form class="ui form" action="/blogs" method="POST">
+    <!--becasue of qs module from extended parametr passed in body-parser-->
+    <!--we can create object on req.body.blog-->
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="blog[title]" placeholder="title">
+    </div>
+    <div class="field">
+      <label>Image</label>
+      <input type="text" name="blog[image]" placeholder="image">
+    </div>
+    <div class="field">
+      <label>Blog Content</label>
+      <textarea name="blog[body]" placeholder="blog post goes here"></textarea>
+    </div>
+    <input class="ui violet basic button" type="submit">
+  </form>
+</div>
+
+<% include ./partials/footer %>
